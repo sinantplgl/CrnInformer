@@ -113,7 +113,7 @@
                 <h2>Request an Alert</h2>
                 <input type="text" id="email" placeholder="Enter SU-net username" required>
                 <input type="text" id="crn" placeholder="Enter CRN" required>
-                <button>Submit</button>
+                <button id="submit">Submit</button>
             </div>                    
         </div>
     </body>
@@ -121,7 +121,7 @@
     <script>
         $('#submit').on('click', function (e) {
             e.preventDefault()
-            var url = 'hostname'
+            var url = 'http://34.70.23.211:3000/'
             var path = `/api/addrequest?email=${$('#email').val()}&crn=${$('#crn').val()}`
 
             $.ajax(url+path, {
